@@ -4,21 +4,22 @@ import java.util.*;
 
 public class Representation {
     /**
-     * 
+     * BFS (used in- shortest path, web crawler, spanning tree)
      */
     public Map<Integer,List<Integer>> Adjlist(){
         //list representation of list
-        int n=6; //no of vertices
+        //int n=6; //no of vertices
         int[][] edges= new int[][]{{0,3},{1,2},{1,5},{2,4},{3,5},{5,4},{5,0}};
 
         //make list from edges
         Map<Integer,List<Integer>> graph=new HashMap<>();
+        for(int i=0;i<6;i++){
+            graph.put(i, new ArrayList<Integer>());
+        }
         for(int i=0;i<edges.length;i++){
-            if(!graph.containsKey(edges[i][0])){
-                graph.put(edges[i][0], new ArrayList<Integer>(Arrays.asList(edges[i][1])));
-            }else{
-                graph.get(edges[i][0]).add(edges[i][1]);
-            }
+            
+            graph.get(edges[i][0]).add(edges[i][1]);
+            
         }
 
         //show the graph
@@ -35,7 +36,7 @@ public class Representation {
     }
     public void matrix(){
         //matrix representation of graph
-        int n=6;
+        //int n=6;
         int[][] edges= new int[][]{{0,3},{1,2},{1,5},{2,4},{3,5},{5,4},{5,0}};
 
         int[][] mat=new int[6][6];
