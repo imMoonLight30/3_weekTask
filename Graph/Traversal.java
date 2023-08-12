@@ -81,7 +81,7 @@ public class Traversal {
     }
 
     public void cycledetection(Map<Integer,List<Integer>> graph){
-        System.out.println("cycle-detection");
+        System.out.println("cycle-detection algo");
         
     }
 
