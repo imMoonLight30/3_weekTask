@@ -81,8 +81,53 @@ public class Traversal {
     }
 
     public void cycledetection(Map<Integer,List<Integer>> graph){
-        System.out.println("cycle-detection algo");
-        
+        System.out.println("cycle-detection algo for undirected graph, and directed graph");
+
+    }
+    /**
+     *  prism algorithm
+     */
+    public void MST(){
+        System.out.println("prim's minimum spanning tree");
+        int v=6;
+        int graph[][]={ {0,4,6,0,0,0},
+                          {4,0,6,3,4,0}, 
+                          {6,6,0,1,8,0},
+                          {0,3,1,0,2,3},
+                          {0,4,8,2,0,7},
+                          {0,0,0,3,7,0}
+                        };
+        //start mst - prims algorithm
+        int parent[]=new int[v];
+        int value[]=new int[v];
+        Arrays.fill(value,Integer.MAX_VALUE);
+        boolean setMST[]=new boolean[v];
+        Arrays.fill(setMST,false);
+
+        //starting point is node-0
+        for(int i=0;i<v;i++){
+
+            int u=selectMinVertex(value, setMST);
+            setMST[u]=true;
+
+            for(int j=0;j<v;j++){
+                if(graph[u][j]!=0 && setMST[j]==false && graph[u][j]<value[j]){
+                    value[j]=graph[u][j];
+                    parent[j]=u;
+                }
+            }
+        }
+
+        //print MST
+        for(int i=0;i<v;i++){
+            System.out.print("u->v"+parent[i]+" "+i+"  : wt->"+graph[parent[i]][i]);
+        }
+
+    }
+    //priority queue
+    public int selectMinVertex(int[] value, boolean[] setMST){
+        //implementation of priorityqueue, which will give the min value vertext 
+        return 0;
     }
 
     public void topologicalsort(){

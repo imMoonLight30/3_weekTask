@@ -5,9 +5,9 @@
     2-BFS - done (sortest path)
     3-DFS - done 
     4-DAG or topological sort -done
-    5-Cycle detection - 
-    6-MST -
+    5-Cycle detection - done
+    6-MST - done
     7-DSU - 
-    8-Sortest path algorithm -
-    9-Stongly connected - 
+    8-Sortest path algorithm - (bfs) or topological sort can also work 
+    9-Stongly connected - done
     10-Bridges - 

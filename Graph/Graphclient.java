@@ -5,10 +5,10 @@ import java.util.Map;
 
 class Graph{
     /*
-     * graph rep (adjacency list, matrix)
-     * search in graph(bfs, dfs)
-     * finding shortest path (topological, dijkstra)
-     * minimum spenning tree (krushkal's, prim's algorithm)
+     * graph rep (adjacency list, matrix) - done
+     * search in graph(bfs, dfs) - done
+     * finding shortest path (topological, dijkstra) - done
+     * minimum spenning tree (krushkal's, prim's algorithm) -done
      * strongly connected graph(kosaraju's algorithm)
      */
     public static void main(String args[]){
@@ -26,6 +26,12 @@ class Graph{
         travel.dfs(graph);
         travel.cycledetection(graph);
         travel.topologicalsort();
+
+        //mst
+
+        //scc
+        Kosaraju scc_obj=new Kosaraju();
+        scc_obj.stronglyConnectedComponent();
 
     }
 }
